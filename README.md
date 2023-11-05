@@ -30,7 +30,7 @@
     <tr align = "center">
     <td>팀장/알고리즘 개발</td>
     <td>Unity 개발 (MR)</td>
-    <td>프로젝트 관리(PM)</td>
+    <td>프로젝트 관리(PM)/데이터수집</td>
     <td>데이터베이스/서버 개발</td>
   </tr>
 
