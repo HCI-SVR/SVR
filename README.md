@@ -48,3 +48,11 @@
   
 </div>
 
+<div>
+  <h2>사용한 기술</h2>
+  <ul>
+    <li>MR 개발: Unity 2019.4.40</li>
+    <li>Hardware: Hololens(1st Gen)</li>
+  </ul>
+</div>
+
