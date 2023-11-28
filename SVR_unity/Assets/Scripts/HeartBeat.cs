@@ -1,102 +1,75 @@
-﻿using Newtonsoft.Json.Linq;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-
-using NativeWebSocket;
 using TMPro;
+using System;
+using UnityEngine.Networking;
+using UnityEngine.UI;
 
 public class HeartBeat : MonoBehaviour
 {
-    
-    WebSocket ws;
     TextMeshProUGUI heartTxt;
-    [SerializeField] public string websocketToken = "fOVRFx4MRNBtMdSHgsYTdZPSv5w6kTTfK4ZB6u5vqicnNmUgnFygOItpkoXganVM​"; 
-    [SerializeField] public string hyperateID = "internal-testing";
-    
+    RectTransform panelRect;
 
-    async void Start()
+
+    private const string apiUrl = "http://your_ec2_public_ip_or_domain/api/heartbeat"; // EC2의 퍼블릭 IP 주소 또는 도메인 주소
+
+    IEnumerator Start()
     {
-        heartTxt = GetComponent<TextMeshProUGUI>();
-        Debug.Log(websocketToken); 
-        ws = new WebSocket("wss://app.hyperate.io/socket/websocket?token="+websocketToken);
-        Debug.Log("connect!");
+        heartTxt = GetComponentInChildren<TextMeshProUGUI>();
+        panelRect = GetComponent<RectTransform>();
+        WaitForSeconds waitTime = new WaitForSeconds(60f); // 1분(60초) 간격으로 실행
 
-
-        ws.OnOpen += () =>
+        while (true)
         {
-            Debug.Log("Connection open!");
-            SendWebSocketMessage();
-        };
+            yield return StartCoroutine(GetHeartbeatData());
+            yield return waitTime;
+        }
+    }
 
-        ws.OnError += (e) =>
+    IEnumerator GetHeartbeatData()
+    {
+        using (UnityWebRequest www = UnityWebRequest.Get(apiUrl))
         {
-            Debug.Log("Error! " + e);
-        };
+            yield return www.SendWebRequest();
 
-        ws.OnClose += (e) =>
-        {
-            Debug.Log("Connection closed!");
-        };
-
-        ws.OnMessage += (bytes) =>
-        {
-            // getting the message as a string
-            var message = System.Text.Encoding.UTF8.GetString(bytes);
-            var msg = JObject.Parse(message);
-
-            if (msg["event"].ToString() == "hr_update")
+            if (www.isNetworkError || www.isHttpError)
             {
-                // Change textbox text into the newly received Heart Rate (integer like "86" which represents beats per minute)
-                heartTxt.text = (string)msg["payload"]["hr"];
+                Debug.LogError("API 요청 중 에러 발생: " + www.error);
             }
-        };
+            else
+            {
+                // API 응답 데이터를 해석하고 처리
+                string json = www.downloadHandler.text;
+                HeartbeatData data = JsonUtility.FromJson<HeartbeatData>(json);
 
-        // Send heartbeat message every 25 seconds in order to not suspended the connection
-        InvokeRepeating("SendHeartbeat", 1.0f, 25.0f);
+                // 받아온 데이터 사용
+                foreach (int value in data.heartbeat)
+                {
+                    Debug.Log(value);
 
-        // waiting for messages
-        await ws.Connect();
+                    // 텍스트 업데이트
+                    heartTxt.text = value.ToString();
 
-    }
+                    // 배경색 변경
+                    if (value > 100)
+                    {
+                        panelRect.GetComponent<Image>().color = Color.red;
+                    }
+                    else
+                    {
+                        // 기본 배경색으로 복원하거나 적절한 다른 색상으로 설정
+                        panelRect.GetComponent<Image>().color = Color.white;
+                    }
 
-    void Update()
-    {
-        #if !UNITY_WEBGL || UNITY_EDITOR
-                ws.DispatchMessageQueue();
-        #endif
-    }
-
-    
-    async void SendWebSocketMessage()
-    {
-        if (ws.State == NativeWebSocket.WebSocketState.Open)
-        {
-            // Log into the "internal-testing" channel
-            await ws.SendText("{\"topic\": \"hr:" + hyperateID + "\", \"event\": \"phx_join\", \"payload\": {}, \"ref\": 0}");
-        }
-    }
-    async void SendHeartbeat()
-    {
-        if (ws.State == NativeWebSocket.WebSocketState.Open)
-        {
-            // Send heartbeat message in order to not be suspended from the connection
-            await ws.SendText("{\"topic\": \"phoenix\",\"event\": \"heartbeat\",\"payload\": {},\"ref\": 0}");
-
+                }
+            }
         }
     }
 
-    private async void OnApplicationQuit()
+    [Serializable]
+    private class HeartbeatData
     {
-        await ws.Close();
+        public List<int> heartbeat;
     }
-}
-
-public class HyperateResponse
-{
-    public string Event { get; set; }
-    public string Payload { get; set; }
-    public string Ref { get; set; }
-    public string Topic { get; set; }
 }

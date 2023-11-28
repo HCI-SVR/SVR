@@ -61,8 +61,10 @@ public class MusicPlayer : MonoBehaviour
         }
     }
 
+    /*
     IEnumerator GetAccessTokenAndSongs()
     {
+        
         string authUrl = "https://accounts.spotify.com/api/token";
         WWWForm form = new WWWForm();
         form.AddField("grant_type", "client_credentials");
@@ -94,10 +96,30 @@ public class MusicPlayer : MonoBehaviour
                 }
             }
         }
+
     }
+    */
+    IEnumerator GetAccessTokenAndSongs()
+    {
+        // 이미 받아온 토큰 정보 사용
+        string responseJson = "{ \"access_token\": \"BQCxco4kbogPwZ5Ng5tpmv8brp5eAG9E6okEgbtd0YFc62mWypvSfypnocu0JTrVLQdDXCLkadZRaDRjD-Cwwj4B_IWbEtMM0qEEB0pz-PfzdGd5aMLf3-MRXTTqEF5keYmIpx6P5yY6DZyov13bNpMuUJsiGH4d-GzqKyBxrumpvTdHu9fIpuq5Ph0Hww2nNpGMXw\", \"token_type\": \"Bearer\", \"expires_in\": 3600, \"refresh_token\": \"AQDyv3Atgm-it2ZkjaPH1R1ZryN4Og6jvw6IuguPXZjUxnVbHJZK5gIT14erLucF8z6_J6vXqzU4dPh-DxrDzHgZyikYtJFSdzNnAml5LtoeDdMt_QPbDUhKSFRcKbXELwQ\", \"expires_at\": 1701079809, \"scope\": null }";
+        AccessTokenResponse accessTokenResponse = JsonUtility.FromJson<AccessTokenResponse>(responseJson);
+        accessToken = accessTokenResponse.access_token;
+
+        if (!string.IsNullOrEmpty(accessToken))
+        {
+            yield return StartCoroutine(GetSongsFromAPI());
+        }
+        else
+        {
+            Debug.LogError("Access token is empty.");
+        }
+    }
+
 
     IEnumerator GetSongsFromAPI()
     {
+        /*
         UnityWebRequest www = UnityWebRequest.Get(apiEndpoint);
         www.SetRequestHeader("Authorization", "Bearer " + accessToken);
 
@@ -115,30 +137,59 @@ public class MusicPlayer : MonoBehaviour
             if (songs != null && songs.songs.Count > 0)
             {
                 // 여기에서 노래 정보에서 미리보기 URL을 가져와서 사용
-                string previewUrl = songs.songs[0].previewUrl;
+                string previewUrl = songs.songs[0].uri;
                 PlayMusic(previewUrl);
             }
         }
+        */
+        // 테스트용 더미 데이터
+        string dummyData = @"
+        {
+            ""group_id"": 3,
+            ""id"": 8,
+            ""image_key"": ""next_level_image.jpg"",
+            ""name"": ""Next Level"",
+            ""singer"": ""에스파"",
+            ""uri"": ""https://api.spotify.com/v1/tracks/3Ua0m0YmEjrMi9XErKcNiR""
+        }";
+
+        // 더미 데이터 역직렬화
+        Song song = JsonUtility.FromJson<Song>(dummyData);
+
+        if (song != null)
+        {
+            // 더미 데이터에서 URI를 가져와 음악을 재생
+            string songUrl = song.uri;
+            PlayMusic(songUrl);
+        }
+        else
+        {
+            Debug.LogError("더미 데이터 파싱 실패.");
+        }
+
+        yield return null; // 테스트용 더미 데이터, 실제 API 호출은 이 예제에서 이루어지지 않습니다.
     }
 
     [Serializable]
     private class AccessTokenResponse
     {
-        public string access_token;
-        public string token_type;
+        public string access_token= "BQCxco4kbogPwZ5Ng5tpmv8brp5eAG9E6okEgbtd0YFc62mWypvSfypnocu0JTrVLQdDXCLkadZRaDRjD-Cwwj4B_IWbEtMM0qEEB0pz-PfzdGd5aMLf3-MRXTTqEF5keYmIpx6P5yY6DZyov13bNpMuUJsiGH4d-GzqKyBxrumpvTdHu9fIpuq5Ph0Hww2nNpGMXw";
+        public string token_type= "Bearer";
+        public int expires_in = 3600;
+        public string refresh_token = "AQDyv3Atgm-it2ZkjaPH1R1ZryN4Og6jvw6IuguPXZjUxnVbHJZK5gIT14erLucF8z6_J6vXqzU4dPh-DxrDzHgZyikYtJFSdzNnAml5LtoeDdMt_QPbDUhKSFRcKbXELwQ";
+        public int expires_at = 1701079809;
+        public string scope = null; 
     }
 
     [Serializable]
     private class Song
     {
-        public string title;
-        public string artist;
-        public string previewUrl; // 미리보기 URL 추가
+        public int group_id;
+        public int id;
+        public string image_key;
+        public string name;
+        public string singer;
+        public string uri;
     }
 
-    [Serializable]
-    private class SongList
-    {
-        public List<Song> songs;
-    }
 }
