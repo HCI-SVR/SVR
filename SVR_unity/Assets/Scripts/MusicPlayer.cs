@@ -11,8 +11,7 @@ public class MusicPlayer : MonoBehaviour
     private AudioSource audioSource;
     private Button playButton;
     private Button pauseButton;
-    private string clientId = "YOUR_CLIENT_ID";
-    private string clientSecret = "YOUR_CLIENT_SECRET";
+
     private string accessToken;
 
     void Start()
