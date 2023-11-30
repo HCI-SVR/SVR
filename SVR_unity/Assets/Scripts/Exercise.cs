@@ -8,6 +8,7 @@ public class Exercise : MonoBehaviour
 {
     public TextMeshProUGUI timerText;
     public TextMeshProUGUI distanceText;
+    public TextMeshProUGUI caloryText; 
     private float elapsedTime = 0f;
     private ExerciseData exerciseData;
 
@@ -19,7 +20,7 @@ public class Exercise : MonoBehaviour
         WaitForSeconds waitTime = new WaitForSeconds(60f); // 1분(60초) 간격으로 실행
         while (true)
         {
-            //yield return StartCoroutine(GetExerciseData());
+            yield return StartCoroutine(GetExerciseData());
             yield return waitTime;
         }
     }
@@ -27,7 +28,6 @@ public class Exercise : MonoBehaviour
     void Update()
     {
         timer();
-        UpdateDistanceText();
     }
 
     void timer()
@@ -42,6 +42,7 @@ public class Exercise : MonoBehaviour
         timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 
+    /*
     void UpdateDistanceText()
     {
         if (exerciseData != null && exerciseData.distances != null && exerciseData.distances.Count > 0)
@@ -52,7 +53,7 @@ public class Exercise : MonoBehaviour
             // 텍스트 업데이트
             distanceText.text = string.Format("{0:F2}km", lastDistance);
         }
-    }
+    }*/
 
     IEnumerator GetExerciseData()
     {
@@ -69,14 +70,28 @@ public class Exercise : MonoBehaviour
                 
                 // API 응답 데이터를 해석하고 처리
                 string json = www.downloadHandler.text;
+                Debug.Log(json);
                 ExerciseData data = JsonUtility.FromJson<ExerciseData>(json);
+
+                // 받아온 데이터 사용
+                foreach (int value in data.calories)
+                {
+                    Debug.Log(value);
+
+                    // 텍스트 업데이트
+                    caloryText.text = " /"+value.ToString()+"kcal";
+
+                    // Wait for 5 seconds before showing the next value
+                    yield return new WaitForSeconds(5f);
+                }
+
             }
         }
     }
     [System.Serializable]
     public class ExerciseData
     {
-        public List<float> distances;
+        //public List<float> distances;
         public List<float> calories; 
     }
 }

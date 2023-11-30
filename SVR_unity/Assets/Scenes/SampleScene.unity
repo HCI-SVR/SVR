@@ -2493,13 +2493,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1295139291}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8e88ed1bdc9f6454ab43418cc751f71c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 1651613137}
-  distanceText: {fileID: 0}
+  distanceText: {fileID: 863952571}
+  caloryText: {fileID: 1782660760}
 --- !u!1 &1331469718
 GameObject:
   m_ObjectHideFlags: 0
