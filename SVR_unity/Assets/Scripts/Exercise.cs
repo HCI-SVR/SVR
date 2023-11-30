@@ -11,7 +11,7 @@ public class Exercise : MonoBehaviour
     private float elapsedTime = 0f;
     private ExerciseData exerciseData;
 
-    private const string apiUrl = "http://your_ec2_public_ip_or_domain/api/exercise"; // EC2의 퍼블릭 IP 주소 또는 도메인 주소
+    private const string apiUrl = "http://43.201.136.115:5000/hci/calories"; // EC2의 퍼블릭 IP 주소 또는 도메인 주소
     
 
     IEnumerator Start()
@@ -19,7 +19,7 @@ public class Exercise : MonoBehaviour
         WaitForSeconds waitTime = new WaitForSeconds(60f); // 1분(60초) 간격으로 실행
         while (true)
         {
-            yield return StartCoroutine(GetExerciseData());
+            //yield return StartCoroutine(GetExerciseData());
             yield return waitTime;
         }
     }
@@ -66,6 +66,7 @@ public class Exercise : MonoBehaviour
             }
             else
             {
+                
                 // API 응답 데이터를 해석하고 처리
                 string json = www.downloadHandler.text;
                 ExerciseData data = JsonUtility.FromJson<ExerciseData>(json);

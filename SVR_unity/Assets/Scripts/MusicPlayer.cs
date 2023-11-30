@@ -21,7 +21,7 @@ public class MusicPlayer : MonoBehaviour
         pauseButton = GameObject.Find("PauseButton").GetComponent<Button>();
 
         playButton.interactable = false; // 초기에는 play 버튼만 활성화
-        StartCoroutine(GetAccessTokenAndSongs());
+        //StartCoroutine(GetAccessTokenAndSongs());
     }
 
     void PlayMusic(string musicUrl)

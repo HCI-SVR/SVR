@@ -8,17 +8,19 @@ using UnityEngine.UI;
 
 public class HeartBeat : MonoBehaviour
 {
-    TextMeshProUGUI heartTxt;
-    RectTransform panelRect;
+    public TextMeshProUGUI heartTxt;
+    public RectTransform panelRect;
 
 
-    private const string apiUrl = "http://your_ec2_public_ip_or_domain/api/heartbeat"; // EC2의 퍼블릭 IP 주소 또는 도메인 주소
+    private const string apiUrl = "http://43.201.136.115:5000/hci/heartbeat"; // EC2의 퍼블릭 IP 주소 또는 도메인 주소
 
-    IEnumerator Start()
+    void Start()
     {
-        heartTxt = GetComponentInChildren<TextMeshProUGUI>();
-        panelRect = GetComponent<RectTransform>();
-        WaitForSeconds waitTime = new WaitForSeconds(60f); // 1분(60초) 간격으로 실행
+        StartCoroutine(HeartbeatRoutine());
+    }
+    IEnumerator HeartbeatRoutine()
+    {
+        WaitForSeconds waitTime = new WaitForSeconds(60f);
 
         while (true)
         {
@@ -41,6 +43,7 @@ public class HeartBeat : MonoBehaviour
             {
                 // API 응답 데이터를 해석하고 처리
                 string json = www.downloadHandler.text;
+                Debug.Log(json); 
                 HeartbeatData data = JsonUtility.FromJson<HeartbeatData>(json);
 
                 // 받아온 데이터 사용
@@ -56,12 +59,16 @@ public class HeartBeat : MonoBehaviour
                     {
                         panelRect.GetComponent<Image>().color = Color.red;
                     }
+                    else if (value > 50)
+                    {
+                        panelRect.GetComponent<Image>().color = Color.yellow;
+                    }
                     else
                     {
-                        // 기본 배경색으로 복원하거나 적절한 다른 색상으로 설정
-                        panelRect.GetComponent<Image>().color = Color.white;
+                        panelRect.GetComponent<Image>().color = Color.green;
                     }
-
+                    // Wait for 5 seconds before showing the next value
+                    yield return new WaitForSeconds(5f);
                 }
             }
         }
