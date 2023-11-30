@@ -12,7 +12,7 @@ public class Exercise : MonoBehaviour
     private float elapsedTime = 0f;
     private ExerciseData exerciseData;
 
-    private const string apiUrl = "http://43.201.136.115:5000/hci/calories"; // EC2의 퍼블릭 IP 주소 또는 도메인 주소
+    private const string apiUrl = "http://43.201.136.115:5000/hci/exercise"; // EC2의 퍼블릭 IP 주소 또는 도메인 주소
     
 
     IEnumerator Start()
@@ -91,7 +91,7 @@ public class Exercise : MonoBehaviour
     [System.Serializable]
     public class ExerciseData
     {
-        //public List<float> distances;
+        public List<float> distances;
         public List<float> calories; 
     }
 }

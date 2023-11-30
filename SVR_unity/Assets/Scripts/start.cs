@@ -16,7 +16,7 @@ public class start : MonoBehaviour
     public Button running;
 
     private int selectedOption;
-    private const string apiUrl="";
+    private const string apiUrl= "http://43.201.136.115:5000/hci/";
 
     void Start()
     {
@@ -61,7 +61,7 @@ public class start : MonoBehaviour
 
         if (www.isNetworkError || www.isHttpError)
         {
-            Debug.LogError("API 요청 중 에러 발생: " + www.error);
+            Debug.LogError("start API 요청 중 에러 발생: " + www.error);
         }
         else
         {

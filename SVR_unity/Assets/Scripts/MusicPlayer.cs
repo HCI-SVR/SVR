@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class MusicPlayer : MonoBehaviour
 {
-    private string apiEndpoint = "http://your-ec2-instance-ip/getSongs"; // EC2의 공인 IP 주소 또는 도메인 주소로 변경
+    private string apiPlayEndpoint = "http://43.201.136.115:5000/hci/rate/"; // EC2의 공인 IP 주소 또는 도메인 주소로 변경
     private AudioSource audioSource;
     private Button playButton;
     private Button pauseButton;
@@ -119,7 +119,7 @@ public class MusicPlayer : MonoBehaviour
     IEnumerator GetSongsFromAPI()
     {
         /*
-        UnityWebRequest www = UnityWebRequest.Get(apiEndpoint);
+        UnityWebRequest www = UnityWebRequest.Get(apiPlayEndpoint);
         www.SetRequestHeader("Authorization", "Bearer " + accessToken);
 
         yield return www.SendWebRequest();
