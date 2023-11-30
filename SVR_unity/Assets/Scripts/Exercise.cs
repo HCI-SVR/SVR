@@ -79,7 +79,7 @@ public class Exercise : MonoBehaviour
                     Debug.Log(value);
 
                     // 텍스트 업데이트
-                    caloryText.text = " /"+value.ToString()+"kcal";
+                    caloryText.text = "/"+value.ToString()+"kcal";
 
                     // Wait for 5 seconds before showing the next value
                     yield return new WaitForSeconds(5f);
