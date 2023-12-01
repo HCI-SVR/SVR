@@ -13,7 +13,7 @@ public class Exercise : MonoBehaviour
     private ExerciseData exerciseData;
 
     private const string apiUrl = "http://43.201.136.115:5000/hci/exercise"; // EC2의 퍼블릭 IP 주소 또는 도메인 주소
-    
+    private const string resetUrl = "http://43.201.136.115:5000/hci/reset";
 
     IEnumerator Start()
     {
@@ -42,18 +42,6 @@ public class Exercise : MonoBehaviour
         timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 
-    /*
-    void UpdateDistanceText()
-    {
-        if (exerciseData != null && exerciseData.distances != null && exerciseData.distances.Count > 0)
-        {
-            // 마지막 거리 정보를 가져옴 (가장 최근 5초 동안의 거리)
-            float lastDistance = exerciseData.distances[exerciseData.distances.Count - 1];
-
-            // 텍스트 업데이트
-            distanceText.text = string.Format("{0:F2}km", lastDistance);
-        }
-    }*/
 
     IEnumerator GetExerciseData()
     {
@@ -72,6 +60,7 @@ public class Exercise : MonoBehaviour
                 string json = www.downloadHandler.text;
                 Debug.Log(json);
                 ExerciseData data = JsonUtility.FromJson<ExerciseData>(json);
+                
 
                 // 받아온 데이터 사용
                 foreach (int value in data.calories)
@@ -80,6 +69,17 @@ public class Exercise : MonoBehaviour
 
                     // 텍스트 업데이트
                     caloryText.text = "/"+value.ToString()+"kcal";
+
+                    // Wait for 5 seconds before showing the next value
+                    yield return new WaitForSeconds(5f);
+                }
+
+                foreach (int value in data.distances)
+                {
+                    Debug.Log(value);
+
+                    // 텍스트 업데이트
+                    distanceText.text = string.Format("{0:F2}km", value);
 
                     // Wait for 5 seconds before showing the next value
                     yield return new WaitForSeconds(5f);

@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.Networking;
+using UnityEditor.PackageManager.Requests;
 
 public class start : MonoBehaviour
 {
@@ -42,10 +43,16 @@ public class start : MonoBehaviour
         Debug.Log("Age: " + age + ", Weight: " + weight + ", Selected intensity: " + selectedOption);
 
         // JSON 데이터 생성
-        string jsonData = "{\"age\":" + age + ", \"weight\":" + weight + "}";
+        string jsonData = "{\"age\":" + age + ", \"weight\":" + weight+", \"group_id\":" + selectedOption +"}";
 
         // POST 요청 생성 및 설정
         UnityWebRequest www = UnityWebRequest.Post(apiUrl, jsonData);
+
+        // JSON 데이터를 바이트로 변환하여 Request에 추가
+        byte[] bodyRaw = System.Text.Encoding.UTF8.GetBytes(jsonData);
+        www.uploadHandler = new UploadHandlerRaw(bodyRaw);
+        www.downloadHandler = new DownloadHandlerBuffer();
+
         www.SetRequestHeader("Content-Type", "application/json");
 
         // 요청 보내기
