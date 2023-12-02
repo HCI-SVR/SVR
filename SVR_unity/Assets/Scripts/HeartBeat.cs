@@ -10,8 +10,7 @@ public class HeartBeat : MonoBehaviour
 {
     public TextMeshProUGUI heartTxt;
     public RectTransform panelRect;
-
-
+ 
     private const string apiUrl = "http://43.201.136.115:5000/hci/heartbeat"; // EC2의 퍼블릭 IP 주소 또는 도메인 주소
 
     void Start()
