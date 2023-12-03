@@ -477,7 +477,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 502475409}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c404dfbffe939cd4cbb0f5a94ebae437, type: 3}
   m_Name: 
@@ -3698,6 +3698,7 @@ GameObject:
   - component: {fileID: 1663516601}
   - component: {fileID: 1663516602}
   - component: {fileID: 1663516600}
+  - component: {fileID: 1663516603}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -3792,6 +3793,23 @@ MonoBehaviour:
     y: 0
     width: 1
     height: 1
+--- !u!114 &1663516603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1663516598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4aa83dbb048876428cc2e59bb8919d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player_age: 0
+  player_weight: 0
+  player_group: 0
+  videoPlayer: {fileID: 1663516600}
+  videoPathPrefix: Assets/Video/
 --- !u!1 &1730556139
 GameObject:
   m_ObjectHideFlags: 0

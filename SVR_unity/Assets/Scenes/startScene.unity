@@ -2387,6 +2387,9 @@ MonoBehaviour:
   fastWalk: {fileID: 448499612}
   jogging: {fileID: 326004106}
   running: {fileID: 579000343}
+  age: 0
+  weight: 0
+  selectedOption: 0
 --- !u!114 &1468253736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2691,7 +2694,7 @@ Transform:
   m_GameObject: {fileID: 1825635501}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children: []
   m_Father: {fileID: 682055879}
   m_RootOrder: 0

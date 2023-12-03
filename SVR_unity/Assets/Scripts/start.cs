@@ -5,7 +5,6 @@ using TMPro;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.Networking;
-using UnityEditor.PackageManager.Requests;
 
 public class start : MonoBehaviour
 {
