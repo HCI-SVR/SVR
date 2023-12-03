@@ -8,7 +8,9 @@ public class Exercise : MonoBehaviour
 {
     public TextMeshProUGUI timerText;
     public TextMeshProUGUI distanceText;
-    public TextMeshProUGUI caloryText; 
+    public TextMeshProUGUI caloryText;
+
+    public int count = 0; 
     private float elapsedTime = 0f;
     private ExerciseData exerciseData;
 
@@ -60,26 +62,38 @@ public class Exercise : MonoBehaviour
                 string json = www.downloadHandler.text;
                 Debug.Log(json);
                 ExerciseData data = JsonUtility.FromJson<ExerciseData>(json);
-                
+                count++; 
 
-                // 받아온 데이터 사용
-                foreach (int value in data.calories)
+                if(count==1 && data.calories[0] != 0)
                 {
-                    Debug.Log(value);
-
-                    // 텍스트 업데이트
-                    caloryText.text = "/"+value.ToString()+"kcal";
-
-                    // Wait for 5 seconds before showing the next value
-                    yield return new WaitForSeconds(5f);
+                    Debug.Log("exercise 데이터를 초기화합니다");
+                    StartCoroutine(GetReset());
+                    data.Reset();
+                    StartCoroutine(GetExerciseData());
                 }
 
-                foreach (int value in data.distances)
-                {
-                    Debug.Log(value);
 
-                    // 텍스트 업데이트
-                    distanceText.text = string.Format("{0:F2}km", value);
+                // 받아온 데이터 사용
+                int counts = Mathf.Max(data.calories.Count, data.distances.Count); // 두 리스트 중 더 긴 길이를 사용
+
+                for (int i = 0; i < counts; i++)
+                {
+                    // Calories 업데이트
+                    if (i < data.calories.Count)
+                    {
+                        float calorieValue = data.calories[i];
+                        Debug.Log(calorieValue);
+                        caloryText.text = string.Format("/{0:F2}kcal", calorieValue);
+                    
+                    }
+
+                    // Distances 업데이트
+                    if (i < data.distances.Count)
+                    {
+                        float distanceValue = data.distances[i];
+                        Debug.Log(distanceValue);
+                        distanceText.text = string.Format("{0:F2}km", distanceValue);
+                    }
 
                     // Wait for 5 seconds before showing the next value
                     yield return new WaitForSeconds(5f);
@@ -88,12 +102,33 @@ public class Exercise : MonoBehaviour
             }
         }
     }
+    IEnumerator GetReset()
+    {
+        using (UnityWebRequest www = UnityWebRequest.Get(resetUrl))
+        {
+            yield return www.SendWebRequest();
+
+            if (www.isNetworkError || www.isHttpError)
+            {
+                Debug.LogError("API 요청 중 에러 발생: " + www.error);
+            }
+        }
+    }
+
     [System.Serializable]
     public class ExerciseData
     {
         public List<float> distances;
-        public List<float> calories; 
+        public List<float> calories;
+
+        public void Reset()
+        {
+            distances = new List<float>();
+            calories = new List<float>();
+        }
     }
+
+
 }
 
 

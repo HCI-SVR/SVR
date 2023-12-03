@@ -8,13 +8,14 @@ using UnityEngine.UI;
 
 public class MusicPlayer : MonoBehaviour
 {
-    private string apiPlayEndpoint = "http://43.201.136.115:5000/hci/rate/"; // EC2의 공인 IP 주소 또는 도메인 주소로 변경
+    private string apiPlayEndpoint = "http://43.201.136.115:5000/rate/"; // EC2의 공인 IP 주소 또는 도메인 주소로 변경
     public AudioSource audioSource;
     public Button playButton;
     public Button pauseButton;
     public Button nextButton; // 다음 음악을 가져오는 버튼
     public HeartBeat heartScript;
     public Slider progressSlider;
+    public RawImage image;
 
     public TextMeshProUGUI currentTimeText; // 현재 시간을 표시하는 텍스트
     public TextMeshProUGUI totalTimeText;   // 총 노래 길이를 표시하는 텍스트
@@ -134,9 +135,11 @@ public class MusicPlayer : MonoBehaviour
             }
             else
             {
+                /*
                 string responseJson = www.downloadHandler.text;
                 AccessTokenResponse accessTokenResponse = JsonUtility.FromJson<AccessTokenResponse>(responseJson);
                 accessToken = accessTokenResponse.access_token;
+                
 
                 if (!string.IsNullOrEmpty(accessToken))
                 {
@@ -146,6 +149,8 @@ public class MusicPlayer : MonoBehaviour
                 {
                     Debug.LogError("Access token is empty.");
                 }
+                */
+                StartCoroutine(GetSongsFromAPI());
             }
         }
 
@@ -156,7 +161,7 @@ public class MusicPlayer : MonoBehaviour
     {
         string heartTxt = heartScript.heartTxt.text; 
         UnityWebRequest www = UnityWebRequest.Get(apiPlayEndpoint+heartTxt);
-        //www.SetRequestHeader("Authorization", "Bearer " + accessToken);
+        Debug.Log(apiPlayEndpoint + heartTxt);
 
         yield return www.SendWebRequest();
 
@@ -171,7 +176,8 @@ public class MusicPlayer : MonoBehaviour
 
             if (song != null)
             {
-                string songUrl = song.uri; 
+                string songUrl = song.preview_url;
+                //Texture2D texture = DownloadHandlerTexture.GetContent(song.image_key);
                 PlayMusic(songUrl);
             }
         }
@@ -190,6 +196,7 @@ public class MusicPlayer : MonoBehaviour
         public int id;
         public string image_key;
         public string name;
+        public string preview_url; 
         public string singer;
         public string uri;
     }

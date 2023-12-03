@@ -16,7 +16,9 @@ public class start : MonoBehaviour
     public Button jogging;
     public Button running;
 
-    private int selectedOption;
+    public int age; 
+    public float weight;
+    public int selectedOption;
     private const string apiUrl= "http://43.201.136.115:5000/hci/";
 
     void Start()
@@ -28,6 +30,7 @@ public class start : MonoBehaviour
         jogging.onClick.AddListener(() => OnOptionButtonClick(2));
         running.onClick.AddListener(() => OnOptionButtonClick(3));
     }
+
     void OnOptionButtonClick(int option)
     {
         selectedOption = option;
@@ -36,10 +39,10 @@ public class start : MonoBehaviour
 
     void StartGame()
     {
-        int age = int.Parse(ageInput.text);
-        float weight = float.Parse(weightInput.text);
+        //나이, 몸무게를 입력받음 
+        age = int.Parse(ageInput.text);
+        weight = float.Parse(weightInput.text);
 
-        // 이후에 게임 실행 또는 다음 씬으로 이동하는 로직 추가
         Debug.Log("Age: " + age + ", Weight: " + weight + ", Selected intensity: " + selectedOption);
 
         // JSON 데이터 생성
