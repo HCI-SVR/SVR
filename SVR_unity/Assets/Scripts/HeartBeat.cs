@@ -25,8 +25,8 @@ public class HeartBeat : MonoBehaviour
 
     void Start()
     {
-        warningTxt.gameObject.SetActive(false);
-        msgTxt.gameObject.SetActive(false);
+        //warningTxt.gameObject.SetActive(false);
+        //msgTxt.gameObject.SetActive(false);
 
         // Player 정보 가져오기
         StartCoroutine(GetPlayerData());
@@ -40,7 +40,7 @@ public class HeartBeat : MonoBehaviour
         //running일 경우 70%
         if (player_group ==3)
         {
-            proper = (220 - player_age-initHeart)*0.7+ initHeart;
+            proper = (220 - player_age-initHeart)*0.7+ initHeart-40;
             Debug.Log("적정 심박수는: "+proper);
             if (value > proper)
             {
@@ -49,7 +49,7 @@ public class HeartBeat : MonoBehaviour
         }
         else if (player_group == 2)//jogging일 경우 65%
         {
-            proper = (220 - player_age - initHeart) * 0.65 + initHeart;
+            proper = (220 - player_age - initHeart) * 0.65 + initHeart-40;
             Debug.Log("적정 심박수는: " + proper);
             if (value > proper)
             {
@@ -58,7 +58,7 @@ public class HeartBeat : MonoBehaviour
         }
         else if (player_group == 1)//fast walk일 경우 60% 
         {
-            proper = (220 - player_age - initHeart) * 0.6 + initHeart;
+            proper = (220 - player_age - initHeart) * 0.6 + initHeart-40;
             Debug.Log("적정 심박수는: " + proper);
             if (value > proper)
             {
@@ -119,6 +119,7 @@ public class HeartBeat : MonoBehaviour
                         msgTxt.gameObject.SetActive(true);
                         msgTxt.SetText("Lower to "+(int)proper);
                     }
+                    msgTxt.SetText("Lower to 88!");
 
                     // 배경색 변경
                     if (value > 100)

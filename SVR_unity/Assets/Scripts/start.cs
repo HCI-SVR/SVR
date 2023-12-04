@@ -28,6 +28,9 @@ public class start : MonoBehaviour
         fastWalk.onClick.AddListener(() => OnOptionButtonClick(1));
         jogging.onClick.AddListener(() => OnOptionButtonClick(2));
         running.onClick.AddListener(() => OnOptionButtonClick(3));
+
+        ageInput.text = "22";
+        weightInput.text = "55"; 
     }
 
     void OnOptionButtonClick(int option)
