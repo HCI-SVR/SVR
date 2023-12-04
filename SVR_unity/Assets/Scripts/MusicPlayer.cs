@@ -16,26 +16,32 @@ public class MusicPlayer : MonoBehaviour
     public HeartBeat heartScript;
     public Slider progressSlider;
     public RawImage image;
+    public TextMeshProUGUI title;
+    public TextMeshProUGUI artist; 
 
     public TextMeshProUGUI currentTimeText; // 현재 시간을 표시하는 텍스트
     public TextMeshProUGUI totalTimeText;   // 총 노래 길이를 표시하는 텍스트
 
-    private string accessToken;
 
     void Start()
     {
-        playButton.interactable = false; // 초기에는 play 버튼만 활성화
+        playButton.interactable = true; // 초기에는 play 버튼만 활성화
+        SetButtonVisible(playButton, true);
+        SetButtonVisible(pauseButton, false);
         nextButton.onClick.AddListener(NextSongButtonClicked); // 버튼에 클릭 이벤트 등록                          
 
-        StartCoroutine(GetAccessTokenAndSongs());
+        StartCoroutine(GetSongsFromAPI());
     }
 
     void Update()
     {
         // 노래가 재생 중일 때마다 Slider의 값을 업데이트
-        if (audioSource.isPlaying)
+        if ((audioSource != null && audioSource.isPlaying))
         {
-            progressSlider.value = audioSource.time / audioSource.clip.length;
+            if (audioSource != null)
+            {
+                progressSlider.value = Mathf.Clamp01(audioSource.time / audioSource.clip.length);
+            }
 
             // 현재 시간과 총 노래 길이를 텍스트로 표시
             currentTimeText.text = FormatTime(audioSource.time);
@@ -47,15 +53,25 @@ public class MusicPlayer : MonoBehaviour
             SetButtonVisible(playButton, false);
             SetButtonVisible(pauseButton, true);
         }
-        else
+        else if (audioSource != null && audioSource.clip != null && !audioSource.isPlaying)
         {
             // 노래가 일시 정지 상태일 때는 playButton을 활성화하고 visible을 true로 설정
             playButton.interactable = true;
             pauseButton.interactable = false;
             SetButtonVisible(playButton, true);
             SetButtonVisible(pauseButton, false);
+
+            // 현재 노래가 끝나면 다음 노래를 가져오도록 수정
+            if (!isGettingNextSong)
+            {
+                StartCoroutine(GetSongsFromAPI());
+            }
         }
     }
+
+
+    private bool isGettingNextSong = false;
+
     void NextSongButtonClicked()
     {
         StartCoroutine(GetSongsFromAPI());
@@ -82,83 +98,51 @@ public class MusicPlayer : MonoBehaviour
 
     void PlayMusic(string musicUrl)
     {
-        // 현재 재생 중인 클립이 있으면 정지
-        if (audioSource.isPlaying)
-        {
-            audioSource.Stop();
-        }
-        
-        // UnityWebRequestMultimedia.GetAudioClipAsync를 사용하여 오디오 클립 가져오기
+       
         StartCoroutine(GetAudioClipAndPlay(musicUrl));
     }
 
     IEnumerator GetAudioClipAndPlay(string musicUrl)
     {
-        using (UnityWebRequest www = UnityWebRequestMultimedia.GetAudioClip(musicUrl, AudioType.MPEG))
-        {
-            yield return www.SendWebRequest();
+        string encodedUrl = Uri.EscapeUriString(musicUrl);
 
-            if (www.responseCode == 200)
-            {
-                AudioClip audioClip = DownloadHandlerAudioClip.GetContent(www);
-                audioSource.clip = audioClip;
-                audioSource.Play();
-
-                // 음악이 재생 중이면 pause 버튼 활성화, play 버튼 비활성화
-                pauseButton.interactable = true;
-                playButton.interactable = false;
-
-                // 노래의 길이를 기다렸다가 다음 노래를 가져오기
-                yield return new WaitForSeconds(audioClip.length);
-                StartCoroutine(GetSongsFromAPI());
-            }
-            else
-            {
-                Debug.LogError("Failed to load audio: " + www.error);
-            }
-        }
-    }
-
-   
-    IEnumerator GetAccessTokenAndSongs()
-    {
-        
-        string authUrl = "http://43.201.136.115:5000/auth/login";
-
-        using (UnityWebRequest www = UnityWebRequest.Get(authUrl)) 
+        using (UnityWebRequest www = UnityWebRequest.Get(encodedUrl))
         {
             yield return www.SendWebRequest();
 
             if (www.isNetworkError || www.isHttpError)
             {
-                Debug.LogError("Failed to get access token: " + www.error);
+                Debug.LogError("Failed to load audio: " + www.error);
             }
             else
             {
-                /*
-                string responseJson = www.downloadHandler.text;
-                AccessTokenResponse accessTokenResponse = JsonUtility.FromJson<AccessTokenResponse>(responseJson);
-                accessToken = accessTokenResponse.access_token;
-                
+                AudioClip audioClip = DownloadHandlerAudioClip.GetContent(www);
 
-                if (!string.IsNullOrEmpty(accessToken))
+                if (audioClip != null)
                 {
+                    audioSource.clip = audioClip;
+                    audioSource.Play();
+                    // 음악이 재생 중이면 pause 버튼 활성화, play 버튼 비활성화
+                    pauseButton.interactable = true;
+                    playButton.interactable = false;
+
+                    // 노래의 길이를 기다렸다가 다음 노래를 가져오기
+                    yield return new WaitForSeconds(audioClip.length);
                     StartCoroutine(GetSongsFromAPI());
                 }
                 else
                 {
-                    Debug.LogError("Access token is empty.");
+                    Debug.LogError("Failed to load audio: " );
                 }
-                */
-                StartCoroutine(GetSongsFromAPI());
             }
+                
         }
-
     }
-
 
     IEnumerator GetSongsFromAPI()
     {
+        isGettingNextSong = true; // 다음 노래를 가져오는 중임을 표시
+
         string heartTxt = heartScript.heartTxt.text; 
         UnityWebRequest www = UnityWebRequest.Get(apiPlayEndpoint+heartTxt);
         Debug.Log(apiPlayEndpoint + heartTxt);
@@ -174,15 +158,36 @@ public class MusicPlayer : MonoBehaviour
             string jsonString = www.downloadHandler.text;
             Song song = JsonUtility.FromJson<Song>(jsonString);
 
-            if (song != null)
+            Debug.Log(jsonString);
+
+            string songUrl = song.preview_url;
+            title.SetText(song.name);
+            artist.SetText(song.singer); 
+
+            PlayMusic(songUrl);
+            StartCoroutine(LoadImage(song.image_key));  
+
+        }
+        isGettingNextSong = false; // 다음 노래 가져오기가 끝났음을 표시
+    }
+    IEnumerator LoadImage(string imageUrl)
+    {
+        using (UnityWebRequest www = UnityWebRequestTexture.GetTexture(imageUrl))
+        {
+            yield return www.SendWebRequest();
+
+            if (www.isNetworkError || www.isHttpError)
             {
-                string songUrl = song.preview_url;
-                //Texture2D texture = DownloadHandlerTexture.GetContent(song.image_key);
-                PlayMusic(songUrl);
+                Debug.LogError("이미지를 불러오는 중 에러 발생: " + www.error);
+            }
+            else
+            {
+                // 텍스처를 받아와 RawImage에 적용
+                Texture2D texture = DownloadHandlerTexture.GetContent(www);
+                image.texture = texture;
             }
         }
     }
-
     [Serializable]
     private class AccessTokenResponse
     {
