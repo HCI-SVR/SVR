@@ -480,7 +480,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 502475409}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c404dfbffe939cd4cbb0f5a94ebae437, type: 3}
   m_Name: 
@@ -492,8 +492,8 @@ MonoBehaviour:
   heartScript: {fileID: 697566045}
   progressSlider: {fileID: 1036406230}
   image: {fileID: 1022040740}
-  title: {fileID: 0}
-  artist: {fileID: 0}
+  title: {fileID: 912639621}
+  artist: {fileID: 1116914781}
   currentTimeText: {fileID: 1730556141}
   totalTimeText: {fileID: 1362199035}
 --- !u!82 &502475419
@@ -626,7 +626,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 502475409}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5a42c0219d4d2d04980b415230a15315, type: 3}
   m_Name: 

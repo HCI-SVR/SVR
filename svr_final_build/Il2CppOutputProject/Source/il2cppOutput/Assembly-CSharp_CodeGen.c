@@ -1,0 +1,625 @@
+﻿#include "il2cpp-config.h"
+
+#ifndef _MSC_VER
+# include <alloca.h>
+#else
+# include <malloc.h>
+#endif
+
+
+
+#include "codegen/il2cpp-codegen-metadata.h"
+
+
+
+
+
+IL2CPP_EXTERN_C_BEGIN
+IL2CPP_EXTERN_C_END
+
+
+
+
+// 0x00000001 System.Collections.IEnumerator Exercise::Start()
+extern void Exercise_Start_m0A4E1728F9524AE564AA1C15EF2C5688B3EFE03B (void);
+// 0x00000002 System.Void Exercise::Update()
+extern void Exercise_Update_m6DF982C7FF3DAA6D51B2F90F5636D42B632634F1 (void);
+// 0x00000003 System.Void Exercise::timer()
+extern void Exercise_timer_m0AFCE961C78C8C64636CEDC871520D5799DA32E1 (void);
+// 0x00000004 System.Collections.IEnumerator Exercise::GetExerciseData()
+extern void Exercise_GetExerciseData_mB2210184EFCB88201564C0DB97C1679B39CEE736 (void);
+// 0x00000005 System.Collections.IEnumerator Exercise::GetReset()
+extern void Exercise_GetReset_m38729C15ADC0BDA7E64C4911E6116117D543B783 (void);
+// 0x00000006 System.Void Exercise::.ctor()
+extern void Exercise__ctor_mFB04680EE0AA675272615A4A404191EBC9831E8F (void);
+// 0x00000007 System.Void Exercise/ExerciseData::Reset()
+extern void ExerciseData_Reset_mA6484D9ED5CDF4384B60F9C38D01149ED0823CFE (void);
+// 0x00000008 System.Void Exercise/ExerciseData::.ctor()
+extern void ExerciseData__ctor_mA5FE2D53930937BEAC59C6002A021ACA22E4BA6F (void);
+// 0x00000009 System.Void Exercise/<Start>d__8::.ctor(System.Int32)
+extern void U3CStartU3Ed__8__ctor_m248A0F30D46A1F2C6B92993F02CAB3BEDEF6FB92 (void);
+// 0x0000000A System.Void Exercise/<Start>d__8::System.IDisposable.Dispose()
+extern void U3CStartU3Ed__8_System_IDisposable_Dispose_mF89F0722CACB84E9B18099D57B5754692A86A513 (void);
+// 0x0000000B System.Boolean Exercise/<Start>d__8::MoveNext()
+extern void U3CStartU3Ed__8_MoveNext_m41FC613EEED348D308AE30C705542D322C7C7317 (void);
+// 0x0000000C System.Object Exercise/<Start>d__8::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CStartU3Ed__8_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m7138951A0AC2019444492280FA2EDEC7226B1441 (void);
+// 0x0000000D System.Void Exercise/<Start>d__8::System.Collections.IEnumerator.Reset()
+extern void U3CStartU3Ed__8_System_Collections_IEnumerator_Reset_mCE539D8FE9CD71A21ECB8172029CC39A8D460F5F (void);
+// 0x0000000E System.Object Exercise/<Start>d__8::System.Collections.IEnumerator.get_Current()
+extern void U3CStartU3Ed__8_System_Collections_IEnumerator_get_Current_m984C46E9944ED6C98837D71C10F113BA1EF1A6C0 (void);
+// 0x0000000F System.Void Exercise/<GetExerciseData>d__11::.ctor(System.Int32)
+extern void U3CGetExerciseDataU3Ed__11__ctor_m376F6361FCADBA77F48CEB93D3B63CC57FE1739A (void);
+// 0x00000010 System.Void Exercise/<GetExerciseData>d__11::System.IDisposable.Dispose()
+extern void U3CGetExerciseDataU3Ed__11_System_IDisposable_Dispose_m2217B74C480A7064BFC6BEECEF96A9D10D9617FB (void);
+// 0x00000011 System.Boolean Exercise/<GetExerciseData>d__11::MoveNext()
+extern void U3CGetExerciseDataU3Ed__11_MoveNext_m79C7336BD6C9741AE390F67B332AC180E5599318 (void);
+// 0x00000012 System.Void Exercise/<GetExerciseData>d__11::<>m__Finally1()
+extern void U3CGetExerciseDataU3Ed__11_U3CU3Em__Finally1_m29296DDC906F61BF259F8977C1FEDB93B09874B1 (void);
+// 0x00000013 System.Object Exercise/<GetExerciseData>d__11::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CGetExerciseDataU3Ed__11_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mE21CDDD7634FCA19EB0052BF66A0570041B8D2EC (void);
+// 0x00000014 System.Void Exercise/<GetExerciseData>d__11::System.Collections.IEnumerator.Reset()
+extern void U3CGetExerciseDataU3Ed__11_System_Collections_IEnumerator_Reset_mE19A29909CDD7A9F912C3A9F7708985C2BCD6DE8 (void);
+// 0x00000015 System.Object Exercise/<GetExerciseData>d__11::System.Collections.IEnumerator.get_Current()
+extern void U3CGetExerciseDataU3Ed__11_System_Collections_IEnumerator_get_Current_m481E910E756CB530DD0852FBD4B3A482C13B9C5A (void);
+// 0x00000016 System.Void Exercise/<GetReset>d__12::.ctor(System.Int32)
+extern void U3CGetResetU3Ed__12__ctor_mBD034153D3C398FCD6D688292F175BEB1529C5B3 (void);
+// 0x00000017 System.Void Exercise/<GetReset>d__12::System.IDisposable.Dispose()
+extern void U3CGetResetU3Ed__12_System_IDisposable_Dispose_m276D6B29D64107963A0CD5A31C63F7F6C371189B (void);
+// 0x00000018 System.Boolean Exercise/<GetReset>d__12::MoveNext()
+extern void U3CGetResetU3Ed__12_MoveNext_m045A4D2D1D5B63C30C19CA6EBC40451314C5C01D (void);
+// 0x00000019 System.Void Exercise/<GetReset>d__12::<>m__Finally1()
+extern void U3CGetResetU3Ed__12_U3CU3Em__Finally1_mA3F6BEC7CC52A6C15D5AF1C298B23BC0493E8E86 (void);
+// 0x0000001A System.Object Exercise/<GetReset>d__12::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CGetResetU3Ed__12_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m44A176FE97F11B541DE55259BDEF66A7343672B4 (void);
+// 0x0000001B System.Void Exercise/<GetReset>d__12::System.Collections.IEnumerator.Reset()
+extern void U3CGetResetU3Ed__12_System_Collections_IEnumerator_Reset_m4D14CC2858465564F5D5F3573E19A353A6C47ED5 (void);
+// 0x0000001C System.Object Exercise/<GetReset>d__12::System.Collections.IEnumerator.get_Current()
+extern void U3CGetResetU3Ed__12_System_Collections_IEnumerator_get_Current_m57B74E931B86B01CB4741AEB0F806BED6D7B44B4 (void);
+// 0x0000001D System.Void HeartBeat::Start()
+extern void HeartBeat_Start_mD061B44B2AB6B64C1E2BB27A8DFF608E0B761D86 (void);
+// 0x0000001E System.Int32 HeartBeat::properHeart(System.Int32)
+extern void HeartBeat_properHeart_mBF42DAAC852598B7BDCC358BCD36D70875A4283B (void);
+// 0x0000001F System.Collections.IEnumerator HeartBeat::HeartbeatRoutine()
+extern void HeartBeat_HeartbeatRoutine_m31F4F48DAF6E49EB7F433F58C04F42346C2378D4 (void);
+// 0x00000020 System.Collections.IEnumerator HeartBeat::GetHeartbeatData()
+extern void HeartBeat_GetHeartbeatData_m9E9CC8D21552B22737DBF46C886907882A0BE701 (void);
+// 0x00000021 System.Collections.IEnumerator HeartBeat::GetPlayerData()
+extern void HeartBeat_GetPlayerData_mCE37825AACE1DDE831A7BB8CF629C00132887B66 (void);
+// 0x00000022 System.Void HeartBeat::.ctor()
+extern void HeartBeat__ctor_m317264798F376E7A4009AA95E09D2CFA3A3B34F0 (void);
+// 0x00000023 System.Void HeartBeat/PlayerData::.ctor()
+extern void PlayerData__ctor_mFD97EDD29FD84BEF37C66782D78453E3B1DC549A (void);
+// 0x00000024 System.Void HeartBeat/HeartbeatData::.ctor()
+extern void HeartbeatData__ctor_mB0725DEA3D74F787FDBF63031B1D67E31E4EB529 (void);
+// 0x00000025 System.Void HeartBeat/<HeartbeatRoutine>d__14::.ctor(System.Int32)
+extern void U3CHeartbeatRoutineU3Ed__14__ctor_mD633C03518D05134D047DF7AFB66CC54C1912CD1 (void);
+// 0x00000026 System.Void HeartBeat/<HeartbeatRoutine>d__14::System.IDisposable.Dispose()
+extern void U3CHeartbeatRoutineU3Ed__14_System_IDisposable_Dispose_m57042FBFB981990C57F591A6A1315A09124A845E (void);
+// 0x00000027 System.Boolean HeartBeat/<HeartbeatRoutine>d__14::MoveNext()
+extern void U3CHeartbeatRoutineU3Ed__14_MoveNext_m6E9B874C19BC39A59E3EE35CD3274AFCABCB3D2B (void);
+// 0x00000028 System.Object HeartBeat/<HeartbeatRoutine>d__14::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CHeartbeatRoutineU3Ed__14_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m2546367BC67CFFC302D38F66191F50EE0516D043 (void);
+// 0x00000029 System.Void HeartBeat/<HeartbeatRoutine>d__14::System.Collections.IEnumerator.Reset()
+extern void U3CHeartbeatRoutineU3Ed__14_System_Collections_IEnumerator_Reset_mA3356894C46798DCEF82A148909ACDCAB19B6D7C (void);
+// 0x0000002A System.Object HeartBeat/<HeartbeatRoutine>d__14::System.Collections.IEnumerator.get_Current()
+extern void U3CHeartbeatRoutineU3Ed__14_System_Collections_IEnumerator_get_Current_mE7588455F4276DE7DCCBF5C1FF2CF5A6E21A4E70 (void);
+// 0x0000002B System.Void HeartBeat/<GetHeartbeatData>d__15::.ctor(System.Int32)
+extern void U3CGetHeartbeatDataU3Ed__15__ctor_m31FC0406FFB325794B0CCA090DC02C40C34C0A93 (void);
+// 0x0000002C System.Void HeartBeat/<GetHeartbeatData>d__15::System.IDisposable.Dispose()
+extern void U3CGetHeartbeatDataU3Ed__15_System_IDisposable_Dispose_m21D07E00DDD17530A1EF93002AE2720145DD9E43 (void);
+// 0x0000002D System.Boolean HeartBeat/<GetHeartbeatData>d__15::MoveNext()
+extern void U3CGetHeartbeatDataU3Ed__15_MoveNext_m06BC442C96F472873BF99E2488B66847D4E52111 (void);
+// 0x0000002E System.Void HeartBeat/<GetHeartbeatData>d__15::<>m__Finally1()
+extern void U3CGetHeartbeatDataU3Ed__15_U3CU3Em__Finally1_m24BD4585C256B36ABD39F43929612B89147C98C6 (void);
+// 0x0000002F System.Void HeartBeat/<GetHeartbeatData>d__15::<>m__Finally2()
+extern void U3CGetHeartbeatDataU3Ed__15_U3CU3Em__Finally2_mEE53B2AF55AF65B9EBC0CE2FF54D2B0185F6EA2C (void);
+// 0x00000030 System.Object HeartBeat/<GetHeartbeatData>d__15::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CGetHeartbeatDataU3Ed__15_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m7F50876E7277D4A19C0B3577FB642DD641FCA0D6 (void);
+// 0x00000031 System.Void HeartBeat/<GetHeartbeatData>d__15::System.Collections.IEnumerator.Reset()
+extern void U3CGetHeartbeatDataU3Ed__15_System_Collections_IEnumerator_Reset_m438D56A654CA6BA8EF222A418A4027658ED1174E (void);
+// 0x00000032 System.Object HeartBeat/<GetHeartbeatData>d__15::System.Collections.IEnumerator.get_Current()
+extern void U3CGetHeartbeatDataU3Ed__15_System_Collections_IEnumerator_get_Current_mCA5465821E64CB7304929C10915A8D1E108F455E (void);
+// 0x00000033 System.Void HeartBeat/<GetPlayerData>d__16::.ctor(System.Int32)
+extern void U3CGetPlayerDataU3Ed__16__ctor_m402D21D89C6057C1F8FA2EB2DB472C6D20D94126 (void);
+// 0x00000034 System.Void HeartBeat/<GetPlayerData>d__16::System.IDisposable.Dispose()
+extern void U3CGetPlayerDataU3Ed__16_System_IDisposable_Dispose_m8649CF266B876B9F6FC3DF24BE11988858F5EFC7 (void);
+// 0x00000035 System.Boolean HeartBeat/<GetPlayerData>d__16::MoveNext()
+extern void U3CGetPlayerDataU3Ed__16_MoveNext_m290CE815823F1B9C8EB50811801C6DE64E3BE71B (void);
+// 0x00000036 System.Void HeartBeat/<GetPlayerData>d__16::<>m__Finally1()
+extern void U3CGetPlayerDataU3Ed__16_U3CU3Em__Finally1_mCC309D8F8622C178E9356C6A35991F04C6986A5F (void);
+// 0x00000037 System.Object HeartBeat/<GetPlayerData>d__16::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CGetPlayerDataU3Ed__16_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mE3013ED616FB3A22E50CC54E71B74B5BEA3A03C3 (void);
+// 0x00000038 System.Void HeartBeat/<GetPlayerData>d__16::System.Collections.IEnumerator.Reset()
+extern void U3CGetPlayerDataU3Ed__16_System_Collections_IEnumerator_Reset_m3FDEE9BFE4D2A8578D0145ACDE340B57228867CC (void);
+// 0x00000039 System.Object HeartBeat/<GetPlayerData>d__16::System.Collections.IEnumerator.get_Current()
+extern void U3CGetPlayerDataU3Ed__16_System_Collections_IEnumerator_get_Current_mFAC213D6F0C790F48183476C06DB72C0F8FBFCAC (void);
+// 0x0000003A System.Void MusicPlayer::Start()
+extern void MusicPlayer_Start_mB7632209E4BD53A89E9FF17E80DAF75B0CDD7582 (void);
+// 0x0000003B System.Void MusicPlayer::Update()
+extern void MusicPlayer_Update_m4FD372D914426A32C46D461C8C5F9592AB94503F (void);
+// 0x0000003C System.Void MusicPlayer::NextSongButtonClicked()
+extern void MusicPlayer_NextSongButtonClicked_m53B1786A2C28698115FA83E94815AA6E51D34EC6 (void);
+// 0x0000003D System.Void MusicPlayer::PauseMusic()
+extern void MusicPlayer_PauseMusic_m25D401FE6A5108CA2816CFAD7732E19FC7ED5735 (void);
+// 0x0000003E System.Void MusicPlayer::SetButtonVisible(UnityEngine.UI.Button,System.Boolean)
+extern void MusicPlayer_SetButtonVisible_mF0078C6987A340FA2808908ACABAD1BE3D51576E (void);
+// 0x0000003F System.String MusicPlayer::FormatTime(System.Single)
+extern void MusicPlayer_FormatTime_mBBAB56F6B5E1B98EB4B19DFBD8F2C0DCE3914EC6 (void);
+// 0x00000040 System.Void MusicPlayer::PlayMusic(System.String)
+extern void MusicPlayer_PlayMusic_mE49F4EC3E1C911F183A1F675CAC2C4B94C18E1CC (void);
+// 0x00000041 System.Collections.IEnumerator MusicPlayer::GetAudioClipAndPlay(System.String)
+extern void MusicPlayer_GetAudioClipAndPlay_mBF5DE57A16162F06FED317EE7016474EBC085FC2 (void);
+// 0x00000042 System.Collections.IEnumerator MusicPlayer::GetSongsFromAPI()
+extern void MusicPlayer_GetSongsFromAPI_m62CDC26FE1E2EAEBBED6B9F98512C1502326967F (void);
+// 0x00000043 System.Collections.IEnumerator MusicPlayer::LoadImage(System.String)
+extern void MusicPlayer_LoadImage_mB2299BB7F984BFC236C98A8954AEDDFC496969F7 (void);
+// 0x00000044 System.Void MusicPlayer::.ctor()
+extern void MusicPlayer__ctor_mF99F328FBAE14172288862A8DC9A04172EF6B488 (void);
+// 0x00000045 System.Void MusicPlayer/AccessTokenResponse::.ctor()
+extern void AccessTokenResponse__ctor_mC1FFABDC8E1446C783885B073FBC45AD94C0DFCB (void);
+// 0x00000046 System.Void MusicPlayer/Song::.ctor()
+extern void Song__ctor_m2DF6E0FE4F1DE7E4ED47F39CB0289C59BAA13AB2 (void);
+// 0x00000047 System.Void MusicPlayer/<GetAudioClipAndPlay>d__20::.ctor(System.Int32)
+extern void U3CGetAudioClipAndPlayU3Ed__20__ctor_m771515FCA9A0940B95F2B4BD02D405C34E99686C (void);
+// 0x00000048 System.Void MusicPlayer/<GetAudioClipAndPlay>d__20::System.IDisposable.Dispose()
+extern void U3CGetAudioClipAndPlayU3Ed__20_System_IDisposable_Dispose_m2C8AC08E88AEE76E102962D278EEC1AB55E2138A (void);
+// 0x00000049 System.Boolean MusicPlayer/<GetAudioClipAndPlay>d__20::MoveNext()
+extern void U3CGetAudioClipAndPlayU3Ed__20_MoveNext_mB896F6C725DFB04B7C9A24EA5E4CBF29D374581F (void);
+// 0x0000004A System.Void MusicPlayer/<GetAudioClipAndPlay>d__20::<>m__Finally1()
+extern void U3CGetAudioClipAndPlayU3Ed__20_U3CU3Em__Finally1_m73CD048C35129B95160FEEC8B1F8AC890CC256CE (void);
+// 0x0000004B System.Object MusicPlayer/<GetAudioClipAndPlay>d__20::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CGetAudioClipAndPlayU3Ed__20_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m8D9CE36D31B1B5430329E75A90A521DDDF489601 (void);
+// 0x0000004C System.Void MusicPlayer/<GetAudioClipAndPlay>d__20::System.Collections.IEnumerator.Reset()
+extern void U3CGetAudioClipAndPlayU3Ed__20_System_Collections_IEnumerator_Reset_mDCD4A8BDF964389B688646C2906951C5AFD87C6F (void);
+// 0x0000004D System.Object MusicPlayer/<GetAudioClipAndPlay>d__20::System.Collections.IEnumerator.get_Current()
+extern void U3CGetAudioClipAndPlayU3Ed__20_System_Collections_IEnumerator_get_Current_m1625E1E73C05AC0DA28760DDD21D3053BD23D5FE (void);
+// 0x0000004E System.Void MusicPlayer/<GetSongsFromAPI>d__21::.ctor(System.Int32)
+extern void U3CGetSongsFromAPIU3Ed__21__ctor_m4153DE044E059AEB9DF8424B2E9BA9119D60B90E (void);
+// 0x0000004F System.Void MusicPlayer/<GetSongsFromAPI>d__21::System.IDisposable.Dispose()
+extern void U3CGetSongsFromAPIU3Ed__21_System_IDisposable_Dispose_m2AD1051BD121083184F45BADB8FE48F3F5613144 (void);
+// 0x00000050 System.Boolean MusicPlayer/<GetSongsFromAPI>d__21::MoveNext()
+extern void U3CGetSongsFromAPIU3Ed__21_MoveNext_mB049BF828698141BB3C05F616A2A5B3655E536B0 (void);
+// 0x00000051 System.Object MusicPlayer/<GetSongsFromAPI>d__21::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CGetSongsFromAPIU3Ed__21_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mDCD1B58CE3AF121479F2BE180D1B296A6F61F8DB (void);
+// 0x00000052 System.Void MusicPlayer/<GetSongsFromAPI>d__21::System.Collections.IEnumerator.Reset()
+extern void U3CGetSongsFromAPIU3Ed__21_System_Collections_IEnumerator_Reset_mE3964738FA50B5A3FDD50616B00AAF12627B25FB (void);
+// 0x00000053 System.Object MusicPlayer/<GetSongsFromAPI>d__21::System.Collections.IEnumerator.get_Current()
+extern void U3CGetSongsFromAPIU3Ed__21_System_Collections_IEnumerator_get_Current_mA5F4DDBDA5D6918C1F5B49D174209DC8781AC001 (void);
+// 0x00000054 System.Void MusicPlayer/<LoadImage>d__22::.ctor(System.Int32)
+extern void U3CLoadImageU3Ed__22__ctor_m70C96C819BC331D6EBCDFF079D5780FF39766356 (void);
+// 0x00000055 System.Void MusicPlayer/<LoadImage>d__22::System.IDisposable.Dispose()
+extern void U3CLoadImageU3Ed__22_System_IDisposable_Dispose_m87FCB178AA678FF794F6D006F930F19461DCEF44 (void);
+// 0x00000056 System.Boolean MusicPlayer/<LoadImage>d__22::MoveNext()
+extern void U3CLoadImageU3Ed__22_MoveNext_m9D854034F9139CBA99AA36E947D48CDD79C0FD40 (void);
+// 0x00000057 System.Void MusicPlayer/<LoadImage>d__22::<>m__Finally1()
+extern void U3CLoadImageU3Ed__22_U3CU3Em__Finally1_m614CE61C67C412E31BC51ABC0D6F1A2B4222C47E (void);
+// 0x00000058 System.Object MusicPlayer/<LoadImage>d__22::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CLoadImageU3Ed__22_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m4117936EEEE57478873612D93DCCA0366FE658C2 (void);
+// 0x00000059 System.Void MusicPlayer/<LoadImage>d__22::System.Collections.IEnumerator.Reset()
+extern void U3CLoadImageU3Ed__22_System_Collections_IEnumerator_Reset_mF734238A68B0B3EBEC364FD9B36707E9079C60E1 (void);
+// 0x0000005A System.Object MusicPlayer/<LoadImage>d__22::System.Collections.IEnumerator.get_Current()
+extern void U3CLoadImageU3Ed__22_System_Collections_IEnumerator_get_Current_m64D803DF946FF09AAE12FB0B9A7DF6874D5C66D0 (void);
+// 0x0000005B System.Void MusicPlayer2::Start()
+extern void MusicPlayer2_Start_m438CAE38CD21CAA279AB85D255BCF10D9978B49B (void);
+// 0x0000005C System.Void MusicPlayer2::Update()
+extern void MusicPlayer2_Update_m226085BBD77373FAD81645F0991DFFC8E692C3CB (void);
+// 0x0000005D System.Void MusicPlayer2::NextSongButtonClicked()
+extern void MusicPlayer2_NextSongButtonClicked_mCFFEC93F03CCF14B5CCB01E9A893DCD0A32CEBB2 (void);
+// 0x0000005E System.Void MusicPlayer2::PauseMusic()
+extern void MusicPlayer2_PauseMusic_m8AEF31917A465EBDDA50D4D09FFC2AFDBBFDDCF3 (void);
+// 0x0000005F System.Void MusicPlayer2::SetButtonVisible(UnityEngine.UI.Button,System.Boolean)
+extern void MusicPlayer2_SetButtonVisible_m6E0CCB27AE6ABFA0D29D4E4FE8F790A5EDF2FCB5 (void);
+// 0x00000060 System.String MusicPlayer2::FormatTime(System.Single)
+extern void MusicPlayer2_FormatTime_mAEBEF12670444BC4E84D9CE725AA10EF44CA534B (void);
+// 0x00000061 System.Int32 MusicPlayer2::GetHeartBeat()
+extern void MusicPlayer2_GetHeartBeat_m8BCDB0FC9398BD0635506CA8BAF7F49BF0ADDDEE (void);
+// 0x00000062 System.Void MusicPlayer2::PlayMusic(System.Int32)
+extern void MusicPlayer2_PlayMusic_m9205ADF183AE0649FB8A1D5C7A1872800EA7B8E1 (void);
+// 0x00000063 System.Collections.IEnumerator MusicPlayer2::UpdateCurrentTimeText()
+extern void MusicPlayer2_UpdateCurrentTimeText_m1CCD8A7776F3A0C43D0F1D4C7C7F7925729EBF3A (void);
+// 0x00000064 System.Void MusicPlayer2::PlayGroup1()
+extern void MusicPlayer2_PlayGroup1_m4B34FDDE0C574936073117E23E38BDA80E135093 (void);
+// 0x00000065 System.Void MusicPlayer2::PlayGroup2()
+extern void MusicPlayer2_PlayGroup2_mC67672687EE710B4CB84E71A68D6ED690BDCA0C7 (void);
+// 0x00000066 System.Void MusicPlayer2::PlayGroup3()
+extern void MusicPlayer2_PlayGroup3_m178E01F634B50DE678EE65BB72F5D3823ACE0F40 (void);
+// 0x00000067 System.Void MusicPlayer2::PlayGroup4()
+extern void MusicPlayer2_PlayGroup4_m7272124BF141E86084B1C2859B75596557C34995 (void);
+// 0x00000068 System.Void MusicPlayer2::PlayGroup5()
+extern void MusicPlayer2_PlayGroup5_mDE4FA9F8748F66C1B89205B6293A035FA92B9931 (void);
+// 0x00000069 System.Collections.IEnumerator MusicPlayer2::LoadImage(System.String)
+extern void MusicPlayer2_LoadImage_mE2AEB7F2EE3B3B961D64797CF91EDA3A6B9C854B (void);
+// 0x0000006A System.Void MusicPlayer2::.ctor()
+extern void MusicPlayer2__ctor_m8C8745B01D7EC364DD2DC8FC94670E7E229DB72A (void);
+// 0x0000006B System.Void MusicPlayer2/<UpdateCurrentTimeText>d__34::.ctor(System.Int32)
+extern void U3CUpdateCurrentTimeTextU3Ed__34__ctor_m6C7A034C06C37EA7E05B7EBAF6EDD6A33A1B9150 (void);
+// 0x0000006C System.Void MusicPlayer2/<UpdateCurrentTimeText>d__34::System.IDisposable.Dispose()
+extern void U3CUpdateCurrentTimeTextU3Ed__34_System_IDisposable_Dispose_m4F331854B78D4A26AA74122FA18E96DA78956568 (void);
+// 0x0000006D System.Boolean MusicPlayer2/<UpdateCurrentTimeText>d__34::MoveNext()
+extern void U3CUpdateCurrentTimeTextU3Ed__34_MoveNext_m84F767DD6759E2067BEBF073B2C09E36368A694D (void);
+// 0x0000006E System.Object MusicPlayer2/<UpdateCurrentTimeText>d__34::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CUpdateCurrentTimeTextU3Ed__34_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m3B4FEF46F019472E8A5E7CA35F431C264B4A23C5 (void);
+// 0x0000006F System.Void MusicPlayer2/<UpdateCurrentTimeText>d__34::System.Collections.IEnumerator.Reset()
+extern void U3CUpdateCurrentTimeTextU3Ed__34_System_Collections_IEnumerator_Reset_m3D4341CCB5E181030F44A0042CFF826F24FB0F6D (void);
+// 0x00000070 System.Object MusicPlayer2/<UpdateCurrentTimeText>d__34::System.Collections.IEnumerator.get_Current()
+extern void U3CUpdateCurrentTimeTextU3Ed__34_System_Collections_IEnumerator_get_Current_m3103A0CA48659E388BEA4858C8EA913536088069 (void);
+// 0x00000071 System.Void MusicPlayer2/<LoadImage>d__40::.ctor(System.Int32)
+extern void U3CLoadImageU3Ed__40__ctor_mCE4AB17DD917863ECBC290396C8334F089ED7639 (void);
+// 0x00000072 System.Void MusicPlayer2/<LoadImage>d__40::System.IDisposable.Dispose()
+extern void U3CLoadImageU3Ed__40_System_IDisposable_Dispose_m546ED8157D6AE98C084660042CAA4F35D80E3DB4 (void);
+// 0x00000073 System.Boolean MusicPlayer2/<LoadImage>d__40::MoveNext()
+extern void U3CLoadImageU3Ed__40_MoveNext_mB4688FC0CE7EA50694B92DCD6EE2FE0E5059C035 (void);
+// 0x00000074 System.Void MusicPlayer2/<LoadImage>d__40::<>m__Finally1()
+extern void U3CLoadImageU3Ed__40_U3CU3Em__Finally1_mF26E5BD249F7EEB3A40BA41FEE7D1A35A9A3CE1B (void);
+// 0x00000075 System.Object MusicPlayer2/<LoadImage>d__40::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CLoadImageU3Ed__40_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mDF0D4DB50ED69EC0E544287B3A4AAE8744F97314 (void);
+// 0x00000076 System.Void MusicPlayer2/<LoadImage>d__40::System.Collections.IEnumerator.Reset()
+extern void U3CLoadImageU3Ed__40_System_Collections_IEnumerator_Reset_mC5F8CD4CFDBD4CAF34C3FD54E5D120600A1DF4F5 (void);
+// 0x00000077 System.Object MusicPlayer2/<LoadImage>d__40::System.Collections.IEnumerator.get_Current()
+extern void U3CLoadImageU3Ed__40_System_Collections_IEnumerator_get_Current_m92858966250E9981FAB9E23949508B894D78D0CE (void);
+// 0x00000078 System.Void VideoController::Start()
+extern void VideoController_Start_mD2C9632505F2B5E7736451B54DB017C0FD2DE77A (void);
+// 0x00000079 System.Collections.IEnumerator VideoController::GetPlayerData()
+extern void VideoController_GetPlayerData_m9D39C2F855B003C9427627DEC7D8CB67A666283A (void);
+// 0x0000007A System.Void VideoController::PlayVideoBasedOnGroupID(System.Int32)
+extern void VideoController_PlayVideoBasedOnGroupID_m8147949AF377E5EF25E8C1F7662F863991380A4C (void);
+// 0x0000007B System.Void VideoController::.ctor()
+extern void VideoController__ctor_mE3D4FD7E6A7DB539F015E2E4F7215D17FDEC53D0 (void);
+// 0x0000007C System.Void VideoController/PlayerData::.ctor()
+extern void PlayerData__ctor_mE71ABA4CFD7CCF2557979382010482CD834880C6 (void);
+// 0x0000007D System.Void VideoController/<GetPlayerData>d__7::.ctor(System.Int32)
+extern void U3CGetPlayerDataU3Ed__7__ctor_mBCD430531423BB3BE4F90BE7E5D0C226BF755BF6 (void);
+// 0x0000007E System.Void VideoController/<GetPlayerData>d__7::System.IDisposable.Dispose()
+extern void U3CGetPlayerDataU3Ed__7_System_IDisposable_Dispose_m0C3F8D0955DD1C5E780A4F152486DAB483E143C7 (void);
+// 0x0000007F System.Boolean VideoController/<GetPlayerData>d__7::MoveNext()
+extern void U3CGetPlayerDataU3Ed__7_MoveNext_mF8A0B6D0A1302F37F7348ADE0D6CB1C6D4FB94CF (void);
+// 0x00000080 System.Void VideoController/<GetPlayerData>d__7::<>m__Finally1()
+extern void U3CGetPlayerDataU3Ed__7_U3CU3Em__Finally1_m4A6FF590B3504F42F5FFBEECAAE9326F390B4D8E (void);
+// 0x00000081 System.Object VideoController/<GetPlayerData>d__7::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CGetPlayerDataU3Ed__7_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mEF0BC2A0685FA838C1973584A23D0DA4F3741AF2 (void);
+// 0x00000082 System.Void VideoController/<GetPlayerData>d__7::System.Collections.IEnumerator.Reset()
+extern void U3CGetPlayerDataU3Ed__7_System_Collections_IEnumerator_Reset_m3EE599E49BA17461F99D42D1BAA24D7D4B5B2DF3 (void);
+// 0x00000083 System.Object VideoController/<GetPlayerData>d__7::System.Collections.IEnumerator.get_Current()
+extern void U3CGetPlayerDataU3Ed__7_System_Collections_IEnumerator_get_Current_m03EEFF8F47ED6E067087839903C10D4C017F5283 (void);
+// 0x00000084 System.Void start::Start()
+extern void start_Start_m5FF38457FC97D514DE113F2821AA67F71BAB2243 (void);
+// 0x00000085 System.Void start::OnOptionButtonClick(System.Int32)
+extern void start_OnOptionButtonClick_m66FC905AEF9840F2FA373418A2F3060AD2263CAF (void);
+// 0x00000086 System.Void start::StartGame()
+extern void start_StartGame_m911845174940501893D3BB0427DAFFC227DB5F42 (void);
+// 0x00000087 System.Collections.IEnumerator start::SendRequest(UnityEngine.Networking.UnityWebRequest)
+extern void start_SendRequest_mF7E4A552568A85E025921E69DD7EC942F9A268A3 (void);
+// 0x00000088 System.Void start::.ctor()
+extern void start__ctor_mE72B43B31D96D828BC476AC31FCC45E1EAFBEB16 (void);
+// 0x00000089 System.Void start::<Start>b__10_0()
+extern void start_U3CStartU3Eb__10_0_mEF2788DE82F72AD3647B6E940D92169F04DA28FA (void);
+// 0x0000008A System.Void start::<Start>b__10_1()
+extern void start_U3CStartU3Eb__10_1_mEFDDEBBA273C65377B5DD33023E159B0ED741E81 (void);
+// 0x0000008B System.Void start::<Start>b__10_2()
+extern void start_U3CStartU3Eb__10_2_m5E30444FC4C387D7CE1AB4655603BE5F83DFD5F7 (void);
+// 0x0000008C System.Void start/<SendRequest>d__13::.ctor(System.Int32)
+extern void U3CSendRequestU3Ed__13__ctor_mB8D6AC731956EAEEC71B6EF64934A22785D81B00 (void);
+// 0x0000008D System.Void start/<SendRequest>d__13::System.IDisposable.Dispose()
+extern void U3CSendRequestU3Ed__13_System_IDisposable_Dispose_m04A9E4D1E01771A20ACF1297A72BB80132AE2B14 (void);
+// 0x0000008E System.Boolean start/<SendRequest>d__13::MoveNext()
+extern void U3CSendRequestU3Ed__13_MoveNext_m39D73143180DDF2FFC55DC801B68BA544156FBA1 (void);
+// 0x0000008F System.Object start/<SendRequest>d__13::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CSendRequestU3Ed__13_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mFE8B522862F999C64BE3D0B640872BE4509DE67F (void);
+// 0x00000090 System.Void start/<SendRequest>d__13::System.Collections.IEnumerator.Reset()
+extern void U3CSendRequestU3Ed__13_System_Collections_IEnumerator_Reset_mEA1977827989F63415EC6E80643CCB8175E7161C (void);
+// 0x00000091 System.Object start/<SendRequest>d__13::System.Collections.IEnumerator.get_Current()
+extern void U3CSendRequestU3Ed__13_System_Collections_IEnumerator_get_Current_m4EC20FD14E7B86C979424A134CC4CA1108B775AF (void);
+static Il2CppMethodPointer s_methodPointers[145] = 
+{
+	Exercise_Start_m0A4E1728F9524AE564AA1C15EF2C5688B3EFE03B,
+	Exercise_Update_m6DF982C7FF3DAA6D51B2F90F5636D42B632634F1,
+	Exercise_timer_m0AFCE961C78C8C64636CEDC871520D5799DA32E1,
+	Exercise_GetExerciseData_mB2210184EFCB88201564C0DB97C1679B39CEE736,
+	Exercise_GetReset_m38729C15ADC0BDA7E64C4911E6116117D543B783,
+	Exercise__ctor_mFB04680EE0AA675272615A4A404191EBC9831E8F,
+	ExerciseData_Reset_mA6484D9ED5CDF4384B60F9C38D01149ED0823CFE,
+	ExerciseData__ctor_mA5FE2D53930937BEAC59C6002A021ACA22E4BA6F,
+	U3CStartU3Ed__8__ctor_m248A0F30D46A1F2C6B92993F02CAB3BEDEF6FB92,
+	U3CStartU3Ed__8_System_IDisposable_Dispose_mF89F0722CACB84E9B18099D57B5754692A86A513,
+	U3CStartU3Ed__8_MoveNext_m41FC613EEED348D308AE30C705542D322C7C7317,
+	U3CStartU3Ed__8_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m7138951A0AC2019444492280FA2EDEC7226B1441,
+	U3CStartU3Ed__8_System_Collections_IEnumerator_Reset_mCE539D8FE9CD71A21ECB8172029CC39A8D460F5F,
+	U3CStartU3Ed__8_System_Collections_IEnumerator_get_Current_m984C46E9944ED6C98837D71C10F113BA1EF1A6C0,
+	U3CGetExerciseDataU3Ed__11__ctor_m376F6361FCADBA77F48CEB93D3B63CC57FE1739A,
+	U3CGetExerciseDataU3Ed__11_System_IDisposable_Dispose_m2217B74C480A7064BFC6BEECEF96A9D10D9617FB,
+	U3CGetExerciseDataU3Ed__11_MoveNext_m79C7336BD6C9741AE390F67B332AC180E5599318,
+	U3CGetExerciseDataU3Ed__11_U3CU3Em__Finally1_m29296DDC906F61BF259F8977C1FEDB93B09874B1,
+	U3CGetExerciseDataU3Ed__11_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mE21CDDD7634FCA19EB0052BF66A0570041B8D2EC,
+	U3CGetExerciseDataU3Ed__11_System_Collections_IEnumerator_Reset_mE19A29909CDD7A9F912C3A9F7708985C2BCD6DE8,
+	U3CGetExerciseDataU3Ed__11_System_Collections_IEnumerator_get_Current_m481E910E756CB530DD0852FBD4B3A482C13B9C5A,
+	U3CGetResetU3Ed__12__ctor_mBD034153D3C398FCD6D688292F175BEB1529C5B3,
+	U3CGetResetU3Ed__12_System_IDisposable_Dispose_m276D6B29D64107963A0CD5A31C63F7F6C371189B,
+	U3CGetResetU3Ed__12_MoveNext_m045A4D2D1D5B63C30C19CA6EBC40451314C5C01D,
+	U3CGetResetU3Ed__12_U3CU3Em__Finally1_mA3F6BEC7CC52A6C15D5AF1C298B23BC0493E8E86,
+	U3CGetResetU3Ed__12_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m44A176FE97F11B541DE55259BDEF66A7343672B4,
+	U3CGetResetU3Ed__12_System_Collections_IEnumerator_Reset_m4D14CC2858465564F5D5F3573E19A353A6C47ED5,
+	U3CGetResetU3Ed__12_System_Collections_IEnumerator_get_Current_m57B74E931B86B01CB4741AEB0F806BED6D7B44B4,
+	HeartBeat_Start_mD061B44B2AB6B64C1E2BB27A8DFF608E0B761D86,
+	HeartBeat_properHeart_mBF42DAAC852598B7BDCC358BCD36D70875A4283B,
+	HeartBeat_HeartbeatRoutine_m31F4F48DAF6E49EB7F433F58C04F42346C2378D4,
+	HeartBeat_GetHeartbeatData_m9E9CC8D21552B22737DBF46C886907882A0BE701,
+	HeartBeat_GetPlayerData_mCE37825AACE1DDE831A7BB8CF629C00132887B66,
+	HeartBeat__ctor_m317264798F376E7A4009AA95E09D2CFA3A3B34F0,
+	PlayerData__ctor_mFD97EDD29FD84BEF37C66782D78453E3B1DC549A,
+	HeartbeatData__ctor_mB0725DEA3D74F787FDBF63031B1D67E31E4EB529,
+	U3CHeartbeatRoutineU3Ed__14__ctor_mD633C03518D05134D047DF7AFB66CC54C1912CD1,
+	U3CHeartbeatRoutineU3Ed__14_System_IDisposable_Dispose_m57042FBFB981990C57F591A6A1315A09124A845E,
+	U3CHeartbeatRoutineU3Ed__14_MoveNext_m6E9B874C19BC39A59E3EE35CD3274AFCABCB3D2B,
+	U3CHeartbeatRoutineU3Ed__14_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m2546367BC67CFFC302D38F66191F50EE0516D043,
+	U3CHeartbeatRoutineU3Ed__14_System_Collections_IEnumerator_Reset_mA3356894C46798DCEF82A148909ACDCAB19B6D7C,
+	U3CHeartbeatRoutineU3Ed__14_System_Collections_IEnumerator_get_Current_mE7588455F4276DE7DCCBF5C1FF2CF5A6E21A4E70,
+	U3CGetHeartbeatDataU3Ed__15__ctor_m31FC0406FFB325794B0CCA090DC02C40C34C0A93,
+	U3CGetHeartbeatDataU3Ed__15_System_IDisposable_Dispose_m21D07E00DDD17530A1EF93002AE2720145DD9E43,
+	U3CGetHeartbeatDataU3Ed__15_MoveNext_m06BC442C96F472873BF99E2488B66847D4E52111,
+	U3CGetHeartbeatDataU3Ed__15_U3CU3Em__Finally1_m24BD4585C256B36ABD39F43929612B89147C98C6,
+	U3CGetHeartbeatDataU3Ed__15_U3CU3Em__Finally2_mEE53B2AF55AF65B9EBC0CE2FF54D2B0185F6EA2C,
+	U3CGetHeartbeatDataU3Ed__15_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m7F50876E7277D4A19C0B3577FB642DD641FCA0D6,
+	U3CGetHeartbeatDataU3Ed__15_System_Collections_IEnumerator_Reset_m438D56A654CA6BA8EF222A418A4027658ED1174E,
+	U3CGetHeartbeatDataU3Ed__15_System_Collections_IEnumerator_get_Current_mCA5465821E64CB7304929C10915A8D1E108F455E,
+	U3CGetPlayerDataU3Ed__16__ctor_m402D21D89C6057C1F8FA2EB2DB472C6D20D94126,
+	U3CGetPlayerDataU3Ed__16_System_IDisposable_Dispose_m8649CF266B876B9F6FC3DF24BE11988858F5EFC7,
+	U3CGetPlayerDataU3Ed__16_MoveNext_m290CE815823F1B9C8EB50811801C6DE64E3BE71B,
+	U3CGetPlayerDataU3Ed__16_U3CU3Em__Finally1_mCC309D8F8622C178E9356C6A35991F04C6986A5F,
+	U3CGetPlayerDataU3Ed__16_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mE3013ED616FB3A22E50CC54E71B74B5BEA3A03C3,
+	U3CGetPlayerDataU3Ed__16_System_Collections_IEnumerator_Reset_m3FDEE9BFE4D2A8578D0145ACDE340B57228867CC,
+	U3CGetPlayerDataU3Ed__16_System_Collections_IEnumerator_get_Current_mFAC213D6F0C790F48183476C06DB72C0F8FBFCAC,
+	MusicPlayer_Start_mB7632209E4BD53A89E9FF17E80DAF75B0CDD7582,
+	MusicPlayer_Update_m4FD372D914426A32C46D461C8C5F9592AB94503F,
+	MusicPlayer_NextSongButtonClicked_m53B1786A2C28698115FA83E94815AA6E51D34EC6,
+	MusicPlayer_PauseMusic_m25D401FE6A5108CA2816CFAD7732E19FC7ED5735,
+	MusicPlayer_SetButtonVisible_mF0078C6987A340FA2808908ACABAD1BE3D51576E,
+	MusicPlayer_FormatTime_mBBAB56F6B5E1B98EB4B19DFBD8F2C0DCE3914EC6,
+	MusicPlayer_PlayMusic_mE49F4EC3E1C911F183A1F675CAC2C4B94C18E1CC,
+	MusicPlayer_GetAudioClipAndPlay_mBF5DE57A16162F06FED317EE7016474EBC085FC2,
+	MusicPlayer_GetSongsFromAPI_m62CDC26FE1E2EAEBBED6B9F98512C1502326967F,
+	MusicPlayer_LoadImage_mB2299BB7F984BFC236C98A8954AEDDFC496969F7,
+	MusicPlayer__ctor_mF99F328FBAE14172288862A8DC9A04172EF6B488,
+	AccessTokenResponse__ctor_mC1FFABDC8E1446C783885B073FBC45AD94C0DFCB,
+	Song__ctor_m2DF6E0FE4F1DE7E4ED47F39CB0289C59BAA13AB2,
+	U3CGetAudioClipAndPlayU3Ed__20__ctor_m771515FCA9A0940B95F2B4BD02D405C34E99686C,
+	U3CGetAudioClipAndPlayU3Ed__20_System_IDisposable_Dispose_m2C8AC08E88AEE76E102962D278EEC1AB55E2138A,
+	U3CGetAudioClipAndPlayU3Ed__20_MoveNext_mB896F6C725DFB04B7C9A24EA5E4CBF29D374581F,
+	U3CGetAudioClipAndPlayU3Ed__20_U3CU3Em__Finally1_m73CD048C35129B95160FEEC8B1F8AC890CC256CE,
+	U3CGetAudioClipAndPlayU3Ed__20_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m8D9CE36D31B1B5430329E75A90A521DDDF489601,
+	U3CGetAudioClipAndPlayU3Ed__20_System_Collections_IEnumerator_Reset_mDCD4A8BDF964389B688646C2906951C5AFD87C6F,
+	U3CGetAudioClipAndPlayU3Ed__20_System_Collections_IEnumerator_get_Current_m1625E1E73C05AC0DA28760DDD21D3053BD23D5FE,
+	U3CGetSongsFromAPIU3Ed__21__ctor_m4153DE044E059AEB9DF8424B2E9BA9119D60B90E,
+	U3CGetSongsFromAPIU3Ed__21_System_IDisposable_Dispose_m2AD1051BD121083184F45BADB8FE48F3F5613144,
+	U3CGetSongsFromAPIU3Ed__21_MoveNext_mB049BF828698141BB3C05F616A2A5B3655E536B0,
+	U3CGetSongsFromAPIU3Ed__21_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mDCD1B58CE3AF121479F2BE180D1B296A6F61F8DB,
+	U3CGetSongsFromAPIU3Ed__21_System_Collections_IEnumerator_Reset_mE3964738FA50B5A3FDD50616B00AAF12627B25FB,
+	U3CGetSongsFromAPIU3Ed__21_System_Collections_IEnumerator_get_Current_mA5F4DDBDA5D6918C1F5B49D174209DC8781AC001,
+	U3CLoadImageU3Ed__22__ctor_m70C96C819BC331D6EBCDFF079D5780FF39766356,
+	U3CLoadImageU3Ed__22_System_IDisposable_Dispose_m87FCB178AA678FF794F6D006F930F19461DCEF44,
+	U3CLoadImageU3Ed__22_MoveNext_m9D854034F9139CBA99AA36E947D48CDD79C0FD40,
+	U3CLoadImageU3Ed__22_U3CU3Em__Finally1_m614CE61C67C412E31BC51ABC0D6F1A2B4222C47E,
+	U3CLoadImageU3Ed__22_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m4117936EEEE57478873612D93DCCA0366FE658C2,
+	U3CLoadImageU3Ed__22_System_Collections_IEnumerator_Reset_mF734238A68B0B3EBEC364FD9B36707E9079C60E1,
+	U3CLoadImageU3Ed__22_System_Collections_IEnumerator_get_Current_m64D803DF946FF09AAE12FB0B9A7DF6874D5C66D0,
+	MusicPlayer2_Start_m438CAE38CD21CAA279AB85D255BCF10D9978B49B,
+	MusicPlayer2_Update_m226085BBD77373FAD81645F0991DFFC8E692C3CB,
+	MusicPlayer2_NextSongButtonClicked_mCFFEC93F03CCF14B5CCB01E9A893DCD0A32CEBB2,
+	MusicPlayer2_PauseMusic_m8AEF31917A465EBDDA50D4D09FFC2AFDBBFDDCF3,
+	MusicPlayer2_SetButtonVisible_m6E0CCB27AE6ABFA0D29D4E4FE8F790A5EDF2FCB5,
+	MusicPlayer2_FormatTime_mAEBEF12670444BC4E84D9CE725AA10EF44CA534B,
+	MusicPlayer2_GetHeartBeat_m8BCDB0FC9398BD0635506CA8BAF7F49BF0ADDDEE,
+	MusicPlayer2_PlayMusic_m9205ADF183AE0649FB8A1D5C7A1872800EA7B8E1,
+	MusicPlayer2_UpdateCurrentTimeText_m1CCD8A7776F3A0C43D0F1D4C7C7F7925729EBF3A,
+	MusicPlayer2_PlayGroup1_m4B34FDDE0C574936073117E23E38BDA80E135093,
+	MusicPlayer2_PlayGroup2_mC67672687EE710B4CB84E71A68D6ED690BDCA0C7,
+	MusicPlayer2_PlayGroup3_m178E01F634B50DE678EE65BB72F5D3823ACE0F40,
+	MusicPlayer2_PlayGroup4_m7272124BF141E86084B1C2859B75596557C34995,
+	MusicPlayer2_PlayGroup5_mDE4FA9F8748F66C1B89205B6293A035FA92B9931,
+	MusicPlayer2_LoadImage_mE2AEB7F2EE3B3B961D64797CF91EDA3A6B9C854B,
+	MusicPlayer2__ctor_m8C8745B01D7EC364DD2DC8FC94670E7E229DB72A,
+	U3CUpdateCurrentTimeTextU3Ed__34__ctor_m6C7A034C06C37EA7E05B7EBAF6EDD6A33A1B9150,
+	U3CUpdateCurrentTimeTextU3Ed__34_System_IDisposable_Dispose_m4F331854B78D4A26AA74122FA18E96DA78956568,
+	U3CUpdateCurrentTimeTextU3Ed__34_MoveNext_m84F767DD6759E2067BEBF073B2C09E36368A694D,
+	U3CUpdateCurrentTimeTextU3Ed__34_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m3B4FEF46F019472E8A5E7CA35F431C264B4A23C5,
+	U3CUpdateCurrentTimeTextU3Ed__34_System_Collections_IEnumerator_Reset_m3D4341CCB5E181030F44A0042CFF826F24FB0F6D,
+	U3CUpdateCurrentTimeTextU3Ed__34_System_Collections_IEnumerator_get_Current_m3103A0CA48659E388BEA4858C8EA913536088069,
+	U3CLoadImageU3Ed__40__ctor_mCE4AB17DD917863ECBC290396C8334F089ED7639,
+	U3CLoadImageU3Ed__40_System_IDisposable_Dispose_m546ED8157D6AE98C084660042CAA4F35D80E3DB4,
+	U3CLoadImageU3Ed__40_MoveNext_mB4688FC0CE7EA50694B92DCD6EE2FE0E5059C035,
+	U3CLoadImageU3Ed__40_U3CU3Em__Finally1_mF26E5BD249F7EEB3A40BA41FEE7D1A35A9A3CE1B,
+	U3CLoadImageU3Ed__40_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mDF0D4DB50ED69EC0E544287B3A4AAE8744F97314,
+	U3CLoadImageU3Ed__40_System_Collections_IEnumerator_Reset_mC5F8CD4CFDBD4CAF34C3FD54E5D120600A1DF4F5,
+	U3CLoadImageU3Ed__40_System_Collections_IEnumerator_get_Current_m92858966250E9981FAB9E23949508B894D78D0CE,
+	VideoController_Start_mD2C9632505F2B5E7736451B54DB017C0FD2DE77A,
+	VideoController_GetPlayerData_m9D39C2F855B003C9427627DEC7D8CB67A666283A,
+	VideoController_PlayVideoBasedOnGroupID_m8147949AF377E5EF25E8C1F7662F863991380A4C,
+	VideoController__ctor_mE3D4FD7E6A7DB539F015E2E4F7215D17FDEC53D0,
+	PlayerData__ctor_mE71ABA4CFD7CCF2557979382010482CD834880C6,
+	U3CGetPlayerDataU3Ed__7__ctor_mBCD430531423BB3BE4F90BE7E5D0C226BF755BF6,
+	U3CGetPlayerDataU3Ed__7_System_IDisposable_Dispose_m0C3F8D0955DD1C5E780A4F152486DAB483E143C7,
+	U3CGetPlayerDataU3Ed__7_MoveNext_mF8A0B6D0A1302F37F7348ADE0D6CB1C6D4FB94CF,
+	U3CGetPlayerDataU3Ed__7_U3CU3Em__Finally1_m4A6FF590B3504F42F5FFBEECAAE9326F390B4D8E,
+	U3CGetPlayerDataU3Ed__7_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mEF0BC2A0685FA838C1973584A23D0DA4F3741AF2,
+	U3CGetPlayerDataU3Ed__7_System_Collections_IEnumerator_Reset_m3EE599E49BA17461F99D42D1BAA24D7D4B5B2DF3,
+	U3CGetPlayerDataU3Ed__7_System_Collections_IEnumerator_get_Current_m03EEFF8F47ED6E067087839903C10D4C017F5283,
+	start_Start_m5FF38457FC97D514DE113F2821AA67F71BAB2243,
+	start_OnOptionButtonClick_m66FC905AEF9840F2FA373418A2F3060AD2263CAF,
+	start_StartGame_m911845174940501893D3BB0427DAFFC227DB5F42,
+	start_SendRequest_mF7E4A552568A85E025921E69DD7EC942F9A268A3,
+	start__ctor_mE72B43B31D96D828BC476AC31FCC45E1EAFBEB16,
+	start_U3CStartU3Eb__10_0_mEF2788DE82F72AD3647B6E940D92169F04DA28FA,
+	start_U3CStartU3Eb__10_1_mEFDDEBBA273C65377B5DD33023E159B0ED741E81,
+	start_U3CStartU3Eb__10_2_m5E30444FC4C387D7CE1AB4655603BE5F83DFD5F7,
+	U3CSendRequestU3Ed__13__ctor_mB8D6AC731956EAEEC71B6EF64934A22785D81B00,
+	U3CSendRequestU3Ed__13_System_IDisposable_Dispose_m04A9E4D1E01771A20ACF1297A72BB80132AE2B14,
+	U3CSendRequestU3Ed__13_MoveNext_m39D73143180DDF2FFC55DC801B68BA544156FBA1,
+	U3CSendRequestU3Ed__13_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mFE8B522862F999C64BE3D0B640872BE4509DE67F,
+	U3CSendRequestU3Ed__13_System_Collections_IEnumerator_Reset_mEA1977827989F63415EC6E80643CCB8175E7161C,
+	U3CSendRequestU3Ed__13_System_Collections_IEnumerator_get_Current_m4EC20FD14E7B86C979424A134CC4CA1108B775AF,
+};
+static const int32_t s_InvokerIndices[145] = 
+{
+	14,
+	23,
+	23,
+	14,
+	14,
+	23,
+	23,
+	23,
+	32,
+	23,
+	95,
+	14,
+	23,
+	14,
+	32,
+	23,
+	95,
+	23,
+	14,
+	23,
+	14,
+	32,
+	23,
+	95,
+	23,
+	14,
+	23,
+	14,
+	23,
+	37,
+	14,
+	14,
+	14,
+	23,
+	23,
+	23,
+	32,
+	23,
+	95,
+	14,
+	23,
+	14,
+	32,
+	23,
+	95,
+	23,
+	23,
+	14,
+	23,
+	14,
+	32,
+	23,
+	95,
+	23,
+	14,
+	23,
+	14,
+	23,
+	23,
+	23,
+	23,
+	94,
+	1847,
+	26,
+	28,
+	14,
+	28,
+	23,
+	23,
+	23,
+	32,
+	23,
+	95,
+	23,
+	14,
+	23,
+	14,
+	32,
+	23,
+	95,
+	14,
+	23,
+	14,
+	32,
+	23,
+	95,
+	23,
+	14,
+	23,
+	14,
+	23,
+	23,
+	23,
+	23,
+	94,
+	1847,
+	10,
+	32,
+	14,
+	23,
+	23,
+	23,
+	23,
+	23,
+	28,
+	23,
+	32,
+	23,
+	95,
+	14,
+	23,
+	14,
+	32,
+	23,
+	95,
+	23,
+	14,
+	23,
+	14,
+	23,
+	14,
+	32,
+	23,
+	23,
+	32,
+	23,
+	95,
+	23,
+	14,
+	23,
+	14,
+	23,
+	32,
+	23,
+	28,
+	23,
+	23,
+	23,
+	23,
+	32,
+	23,
+	95,
+	14,
+	23,
+	14,
+};
+extern const Il2CppCodeGenModule g_AssemblyU2DCSharpCodeGenModule;
+const Il2CppCodeGenModule g_AssemblyU2DCSharpCodeGenModule = 
+{
+	"Assembly-CSharp.dll",
+	145,
+	s_methodPointers,
+	0,
+	NULL,
+	s_InvokerIndices,
+	0,
+	NULL,
+	0,
+	NULL,
+	0,
+	NULL,
+	NULL,
+};
